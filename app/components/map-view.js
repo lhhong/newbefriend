@@ -8,8 +8,7 @@ import {
 import {
     Actions,
 } from 'react-native-router-flux';
-import MainStyles from '../styles/style.main'
-import SelectionStyles from '../styles/style.selections'
+import Styles from '../styles/style.main'
 
 export default class ActivitySelection extends Component<{}> {
     static navigationOptions = {
@@ -17,7 +16,7 @@ export default class ActivitySelection extends Component<{}> {
     };
     render() {
         return (
-            <View style={MainStyles.container}>
+            <View style={Styles.container}>
             <Text>A text</Text>
             <Button
             title="Go to Friend Bubbles"
