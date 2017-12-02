@@ -1,6 +1,30 @@
 import { StyleSheet } from 'react-native';
 
+const Dimensions = require('Dimensions');
+
+const winw = Dimensions.get('window');
+
 export default styles = StyleSheet.create({
+
+  header: {
+    fontSize: 30,
+    color:'#585858',
+    paddingBottom:10,
+  },
+  bodyText:{
+    fontSize: 15,
+    color:'#848484',
+    paddingBottom:7,
+    textAlign: 'center'
+  },
+  subText:{
+    fontSize: 10,
+    color:'#61380B',
+    textAlign: 'center',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+
   container: {
     flex: 1,
     justifyContent: 'center',

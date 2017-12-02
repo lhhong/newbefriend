@@ -5,11 +5,12 @@ import {
   Text,
   View
 } from 'react-native';
-
+import userBubble from './user-bubble'
 export default class FriendBubbles extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
+        
         <Text style={styles.welcome}>
           Welcome to React Native! At Friend Bubble
         </Text>
