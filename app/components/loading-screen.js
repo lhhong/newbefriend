@@ -17,6 +17,7 @@ import {
 } from 'react-native-router-flux';
 import MainStyles from '../styles/style.main'
 import SelectionStyles from '../styles/style.selections'
+import Login from '../utils/fb-login'
 
 export default class LoadingScreen extends Component<{}> {
     static navigationOptions = {
@@ -33,6 +34,7 @@ export default class LoadingScreen extends Component<{}> {
             <Text style={MainStyles.header}> Welcome Socializer!</Text>
             <Text style={MainStyles.bodyText}> What are you up to?</Text>
             <Text style={MainStyles.bodyText}> Find friends to hang out with a tap of a button!</Text>
+            <Login style={SelectionStyles.fbLogin}/>
             <TouchableHighlight style={{flex:1}} onPress={Actions.friendBubbles}>
                 <Image source = {require('../../Images/LogInG.png')}
                 style={SelectionStyles.gButton}
@@ -47,28 +49,4 @@ export default class LoadingScreen extends Component<{}> {
         );
     }
 }
-{/*
-            <Container>
-                <Button block>
-                    <Text> Hello </Text>
-                </Button>
-            </Container>
 
-            <Button
-            color='#FE9A2E'
-            raised={true}
-            overrides={true}
-            backgroundColor='#FE9A2E'
-            title="Go to Friend Bubbles"
-            onPress={
-                Actions.friendBubbles
-            }/>
-*/}
-
-
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});

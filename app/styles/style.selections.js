@@ -50,6 +50,17 @@ export default styles = StyleSheet.create({
     borderRadius:10,
     borderColor: '#FF8000',
   },
+  fbLogin:{
+    //Don't change width and height unless changing aspect ratio
+    //Use scaleX and scaleY 
+    width: 190, 
+    height: 30, 
+    transform: [
+      {scaleX: 1.4},
+      {scaleY: 1.4}
+    ],
+    marginTop: 20
+  }
 
 });
 
