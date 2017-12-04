@@ -16,33 +16,11 @@ import {
     Actions,
 } from 'react-native-router-flux';
 import { LoginButton, AccessToken, GraphRequestManager, GraphRequest } from 'react-native-fbsdk'
-import ep from '../../ip-addr'
 
 function serverLogin(result){
     AccessToken.getCurrentAccessToken().then(
         (data) => {
             let accessToken = data.accessToken;
-            const responseInfoCallback = (error, result) => {
-                if (error) {
-                    console.log(error)
-                    alert('Error fetching data: ' + error.toString());
-                } else {
-                    console.log(result)
-                    alert('Success fetching data: ' + result.toString());
-                }
-            }
-            const infoRequest = new GraphRequest(
-                '/me',
-                {
-                    accessToken: accessToken,
-                    parameters: {
-                        fields: {
-                            string: 'id,name,picture'
-                        }
-                    }
-                },
-                responseInfoCallback,
-            );
             const responseFriendsCallback = (error, result) => {
                 if (error) {
                     console.log(error)
@@ -59,8 +37,29 @@ function serverLogin(result){
                 },
                 responseFriendsCallback,
             );
+            const responseInfoCallback = (error, result) => {
+                if (error) {
+                    console.log(error)
+                    alert('Error fetching data: ' + error.toString());
+                } else {
+                    console.log(result)
+                    alert('Success fetching data: ' + result.toString());
+                    new GraphRequestManager().addRequest(friendsRequest).start();
+                }
+            }
+            const infoRequest = new GraphRequest(
+                '/me',
+                {
+                    accessToken: accessToken,
+                    parameters: {
+                        fields: {
+                            string: 'id,name,picture'
+                        }
+                    }
+                },
+                responseInfoCallback,
+            );
             new GraphRequestManager().addRequest(infoRequest).start();
-            new GraphRequestManager().addRequest(friendsRequest).start();
         })
     alert("Login was successful with permissions: " + result.grantedPermissions)
 }
