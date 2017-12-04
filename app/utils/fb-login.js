@@ -43,8 +43,24 @@ function serverLogin(result){
                 },
                 responseInfoCallback,
             );
+            const responseFriendsCallback = (error, result) => {
+                if (error) {
+                    console.log(error)
+                    alert('Error fetching data: ' + error.toString());
+                } else {
+                    console.log(result)
+                    alert('Success fetching data: ' + result.toString());
+                }
+            }
+            const friendsRequest = new GraphRequest(
+                '/me/friends',
+                {
+                    accessToken: accessToken,
+                },
+                responseFriendsCallback,
+            );
             new GraphRequestManager().addRequest(infoRequest).start();
-            console.log("sent request")
+            new GraphRequestManager().addRequest(friendsRequest).start();
         })
     alert("Login was successful with permissions: " + result.grantedPermissions)
 }
