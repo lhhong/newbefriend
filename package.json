@@ -11,6 +11,7 @@
 		"react": "16.0.0",
 		"react-native": "0.50.4",
 		"react-native-fbsdk": "^0.6.3",
+		"react-native-modal-datetime-picker": "^4.13.0",
 		"react-native-router-flux": "^3.43.0",
 		"react-router": "^3.2.0"
 	},

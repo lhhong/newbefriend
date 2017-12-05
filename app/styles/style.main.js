@@ -24,7 +24,9 @@ export default styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
   },
-
+  contentPadding: {
+    padding: (winw.width)*0.01,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',

@@ -44,12 +44,13 @@ export default styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  hungry:{
-    height: (winw.width)*0.1,
-    width: (winw.width)*0.1,
-    borderRadius:10,
-    borderColor: '#FF8000',
+  moodSelection:{
+    height: (winw.width)*0.2,
+    width: (winw.width)*0.90,
+    margin: 8,
+    justifyContent: 'center',
   },
+
   fbLogin:{
     //Don't change width and height unless changing aspect ratio
     //Use scaleX and scaleY 
