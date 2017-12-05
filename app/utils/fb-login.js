@@ -16,6 +16,7 @@ import {
     Actions,
 } from 'react-native-router-flux';
 import { LoginButton, AccessToken, GraphRequestManager, GraphRequest } from 'react-native-fbsdk'
+import MyReq from './request-manager';
 
 function serverLogin(result){
     AccessToken.getCurrentAccessToken().then(
@@ -44,6 +45,7 @@ function serverLogin(result){
                 } else {
                     console.log(result)
                     alert('Success fetching data: ' + result.toString());
+                    MyReq.logIn(result)
                     new GraphRequestManager().addRequest(friendsRequest).start();
                 }
             }

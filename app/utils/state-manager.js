@@ -5,16 +5,16 @@ import {
 
 export default class State {
 
-    states = {
+    static states = {
         'id': null
     }
 
-    function storeId(id) {
+    static storeId(id) {
         AsyncStorage.setItem('id', id);
-        states.id = id
+        this.states.id = id
     }
 
-    function getId(callback) {
+    static getId(callback) {
         if (states.id != null) {
             callback(states.id);
         }
