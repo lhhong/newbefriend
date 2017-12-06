@@ -38,8 +38,8 @@ export default class ActivitySelection extends Component<{}> {
         console.log('A date has been picked: ', date);
         
         this._hideDateTimePicker();
-        Actions.friendsMock();
-        //Actions.friendBubbles();
+        //Actions.friendsMock();
+        Actions.friendBubbles();
 
     }
     static navigationOptions = {

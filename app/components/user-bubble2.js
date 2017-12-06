@@ -32,8 +32,6 @@ constructor(props) {
  }
  render(){
  	return(
- 		<Container style={{alignItems: 'center'}}>
- 		<Header/>
  		<TouchableOpacity style={[SelectionStyles.profileButton, {backgroundColor:'#F5A9A9'}]}>
  			<View style={{flexDirection:'row'}}>
  				<Left>
@@ -47,7 +45,6 @@ constructor(props) {
  				</Right>
  			</View>
  		</TouchableOpacity>
- 		</Container>
  		)
  }
 }

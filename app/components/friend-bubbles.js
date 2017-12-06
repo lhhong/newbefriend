@@ -51,15 +51,15 @@ this.user = [{
   }); 
 }
   render() {
-   // console.log(this.props)
-    // var lists = this.user.map(function(u) 
-    //   {return(<li key=u.name>
-
+     var lists = this.user.map((u) => 
+        <UserBubble key={u.name} data={u} />
         
-    //   </li>)};
+       );
+      console.log(lists)
     return (
-      <View style={{flexDirection:'row', justifyContent: 'center'}}>
-        <UserBubble data = {this.user} />
+      <View style={{flexDirection:'column', justifyContent: 'center'}}>
+        <Header />
+        {lists}
       </View>
     );
   }

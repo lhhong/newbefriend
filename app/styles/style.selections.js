@@ -36,9 +36,10 @@ export default styles = StyleSheet.create({
     height: 90,
     width: (winw.width)*0.93,
     margin: 10,
+    marginBottom: 0,
     borderRadius: 5,
     paddingRight: 5,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   profilepic:{
     height: 90,
