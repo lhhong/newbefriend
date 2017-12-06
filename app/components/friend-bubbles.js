@@ -21,12 +21,20 @@ import {
    Body,
    Icon,
 } from 'native-base';
-import UserBubble from './user-bubble'
+import UserBubble from './user-bubble2'
 
 export default class FriendBubbles extends Component<{}> {
   constructor (props) {
     super(props)
     this.state = {data: []}
+
+this.user = [{
+  name: "a name1",
+  picture: "https://scontent.xx.fbcdn.net/v/t1.0-1/c99.74.466.466/s200x200/73093_1326415499175_214323_n.jpg?oh=20c8f574b1e9acfae45bdee7d7503bcc&oe=5AD5386D",
+}, {
+  name: "a name2",
+  picture: "https://scontent.xx.fbcdn.net/v/t1.0-1/c99.74.466.466/s200x200/73093_1326415499175_214323_n.jpg?oh=20c8f574b1e9acfae45bdee7d7503bcc&oe=5AD5386D",
+}]
   }
   componentWillMount() {
   fetch('https://officehoursteam.herokuapp.com/posts.json', {
@@ -43,19 +51,15 @@ export default class FriendBubbles extends Component<{}> {
   }); 
 }
   render() {
-    console.log(this.props);
+   // console.log(this.props)
+    // var lists = this.user.map(function(u) 
+    //   {return(<li key=u.name>
+
+        
+    //   </li>)};
     return (
-      <UserBubble
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native! At Friend Bubble
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+      <View style={{flexDirection:'row', justifyContent: 'center'}}>
+        <UserBubble data = {this.user} />
       </View>
     );
   }

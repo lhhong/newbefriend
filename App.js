@@ -9,7 +9,7 @@ import FriendBubbles from './app/components/friend-bubbles'
 import MapView from './app/components/map-view'
 import LoadingScreen from './app/components/loading-screen'
 import SignIn from './app/components/sign-in'
-import TimePicker from './app/components/time-picker-module'
+import FriendsMock from './app/components/friends-mock'
 
 export default class App extends Component<{}> {
     render() {
@@ -24,7 +24,7 @@ const scenes = Actions.create(
         <Scene key="friendBubbles" title="Friends" component={FriendBubbles} />
         <Scene key="mapView" title="Map" component={MapView} />
         <Scene key="signIn" title="SignIn" component={SignIn} />       
-        <Scene key="timePicker" title="Time Picker" component={TimePicker} />   
+        <Scene key="friendsMock" title="Friends/Deals" component={FriendsMock} />   
     </ Scene>
 );
 

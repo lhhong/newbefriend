@@ -26,14 +26,30 @@ import SelectionStyles from '../styles/style.selections'
 
 class UserBubble2 extends Component{
 constructor(props) {
- 	super(props)
+ 	super(props);
+ 	console.log(props)
+
  }
  render(){
  	return(
- 		<TouchableOpacity>
- 			<View>
- 				<Image source = {{uri:'this.props.user_picture'}} />
- 				<Text> this.props.
+ 		<Container style={{alignItems: 'center'}}>
+ 		<Header/>
+ 		<TouchableOpacity style={[SelectionStyles.profileButton, {backgroundColor:'#F5A9A9'}]}>
+ 			<View style={{flexDirection:'row'}}>
+ 				<Left>
+ 				<Image style = {SelectionStyles.profilepic} source = {{uri:this.props.data.picture}} />
+ 				</Left>
+ 				<Right>
+ 				<Text> {this.props.data.name} </Text>
+ 				<Text> Hungry </Text>
+ 				<Text> {this.props.data.availableFor} </Text>
+
+ 				</Right>
+ 			</View>
+ 		</TouchableOpacity>
+ 		</Container>
  		)
  }
 }
+
+export default UserBubble2

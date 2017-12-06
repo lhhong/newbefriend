@@ -28,6 +28,24 @@ export default styles = StyleSheet.create({
     borderColor: '#CEECF5',
     borderWidth: 1
   },
+  userBubble:{
+    justifyContent:'center',
+    margin: 10,
+  },
+  profileButton:{
+    height: 90,
+    width: (winw.width)*0.93,
+    margin: 10,
+    borderRadius: 5,
+    paddingRight: 5,
+    justifyContent: 'center'
+  },
+  profilepic:{
+    height: 90,
+    width: 90,
+    alignSelf: 'flex-start',
+    borderRadius: 5
+  },
   container: {
     flex: 1,
     justifyContent: 'center',

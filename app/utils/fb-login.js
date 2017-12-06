@@ -55,7 +55,7 @@ function serverLogin(result){
                     accessToken: accessToken,
                     parameters: {
                         fields: {
-                            string: 'id,name,picture'
+                            string: 'id,name,picture.type(large)'
                         }
                     }
                 },
