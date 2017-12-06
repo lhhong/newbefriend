@@ -27,6 +27,13 @@ export default styles = StyleSheet.create({
   contentPadding: {
     padding: (winw.width)*0.01,
   },
+  backgroundImage:{
+    flex: 1,
+    width: null,
+    height: (winw.height)*.5,
+    resizeMode: 'stretch',
+    // position: 'absolute',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
