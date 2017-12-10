@@ -46,6 +46,30 @@ export default styles = StyleSheet.create({
     alignSelf: 'flex-start',
     borderRadius: 5
   },
+  buttonHeader:{
+    alignItems: 'center',
+    paddingTop: 4,
+    borderRadius: 5,
+    margin: 0.5,
+    height: 30,
+    width: (winw.width)*0.5 - 1,
+  },
+  buttonFooter:{
+    alignItems: 'center',
+    borderRadius: 5,
+    margin: 0.5,
+    height: 30,
+    width: (winw.width)*0.333 - 1,
+    height: (winw.width)*0.333 -1,
+    top: (winw.height)*0.645,
+  },
+  imageFooter:{
+    alignItems: 'center',
+    borderRadius: 5,
+    height: 30,
+    width: (winw.width)*0.333 - 1,
+    height: (winw.width)*0.333 -1,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',

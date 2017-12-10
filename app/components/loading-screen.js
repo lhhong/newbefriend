@@ -35,16 +35,10 @@ export default class LoadingScreen extends Component<{}> {
             <Text style={MainStyles.bodyText}> What are you up to?</Text>
             <Text style={MainStyles.bodyText}> Find friends to hang out with a tap of a button!</Text>
             <Login style={SelectionStyles.fbLogin}/>
-            <TouchableHighlight style={{flex:1}} onPress={Actions.activitySelection}>
-                <Image source = {require('../../Images/LogInG.png')}
-                style={SelectionStyles.gButton}
-                resizeMode="contain"
-                />
-            </TouchableHighlight>  
-            <TouchableOpacity onPress={Actions.mapView}>
-            <Text style={MainStyles.subText}> Don't have an account? Sign up here! </Text>
-            </TouchableOpacity>
-            <Text style={{flex:1}}> </Text>
+            <Button large style={{flex:1, backgroundColor: 'transparent'}} onPress={Actions.activitySelection}>
+            <Text>      </Text>
+            </Button>
+
             </View>
         );
     }

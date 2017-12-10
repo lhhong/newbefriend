@@ -31,8 +31,8 @@ export default styles = StyleSheet.create({
     flex: 1,
     width: null,
     height: (winw.height)*.5,
-    resizeMode: 'stretch',
-    // position: 'absolute',
+    // resizeMode: 'contain',
+    //position: 'absolute',
   },
   container: {
     flex: 1,

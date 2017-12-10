@@ -25,10 +25,10 @@ function serverLogin(result){
             const responseFriendsCallback = (error, result) => {
                 if (error) {
                     console.log(error)
-                    alert('Error fetching data: ' + error.toString());
+                    //alert('Error fetching data: ' + error.toString());
                 } else {
                     console.log(result)
-                    alert('Success fetching data: ' + result.toString());
+                    //alert('Success fetching data: ' + result.toString());
                 }
             }
             const friendsRequest = new GraphRequest(
@@ -41,10 +41,10 @@ function serverLogin(result){
             const responseInfoCallback = (error, result) => {
                 if (error) {
                     console.log(error)
-                    alert('Error fetching data: ' + error.toString());
+                   // alert('Error fetching data: ' + error.toString());
                 } else {
                     console.log(result)
-                    alert('Success fetching data: ' + result.toString());
+                    //alert('Success fetching data: ' + result.toString());
                     MyReq.logIn(result)
                     new GraphRequestManager().addRequest(friendsRequest).start();
                 }
@@ -63,7 +63,7 @@ function serverLogin(result){
             );
             new GraphRequestManager().addRequest(infoRequest).start();
         })
-    alert("Login was successful with permissions: " + result.grantedPermissions)
+    //alert("Login was successful with permissions: " + result.grantedPermissions)
 }
 
 export default class Login extends Component<{
@@ -78,10 +78,11 @@ export default class Login extends Component<{
                 onLoginFinished={
                     (error, result) => {
                         if (error) {
-                            alert("Login failed with error: " + result.error);
+                            //alert("Login failed with error: " + result.error);
                         } else if (result.isCancelled) {
-                            alert("Login was cancelled");
+                            //alert("Login was cancelled");
                         } else {
+                            Actions.activitySelection()
                             console.log(result)
                             serverLogin(result)
                         }
